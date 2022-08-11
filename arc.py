@@ -9,18 +9,19 @@ from matplotlib.figure import Figure
 win = Tk()
 win.geometry("1200x800")
 win.option_add("*Font", "맑은고딕 20")
+win.config(bg="white")
 win.title("ARC")
 
 frame1 = tkinter.Frame(win, relief="solid", bd=2)
-frame1.config(width=160, height=600)
+frame1.config(width=160, height=600, bg="white")
 frame1.grid(column=0, row=0, padx=20, pady=20)
 
 frame2 = tkinter.Frame(win, relief="solid", bd=2)
-frame2.config(width=160, height=600)
+frame2.config(width=160, height=600, bg="white")
 frame2.grid(column=1, row=0, padx=20, pady=20)
 
 frame3 = tkinter.Frame(win, relief="solid", bd=2)
-frame3.config(width=160, height=600)
+frame3.config(width=160, height=600, bg="white")
 frame3.grid(column=2, row=0, padx=20, pady=20)
 
 
@@ -46,15 +47,14 @@ x = [i for i in range(101)]
 r = [1 for i in range(101)]
 y = f(x)
 
-plt.plot(x,r,'--r',label='input')
-plt.plot(x,y,'-b',label='output')
+plt.plot(x, r, '--r', label='input')
+plt.plot(x, y, '-b', label='output')
 plt.legend(loc='upper right', ncol=1)
-plt.axis([0,100,0,1.2])
+plt.axis([0, 100, 0, 1.2])
 plt.xlabel('time')
 plt.ylabel('response')
 plt.title('simulation result')
 plt.grid(True, linestyle='--')
-
 
 fig = Figure(figsize=(10, 7), dpi=100)
 ax = fig.add_subplot(1, 1, 1)
